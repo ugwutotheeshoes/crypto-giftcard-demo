@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FaBitcoin, FaBold } from "react-icons/fa";
+import "./App.css";
+import { Server } from "./Server";
+import { Binance } from "./Binance";
+import { Bitcoin } from "./Bitcoin";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <h2 className='title'>Buy Crypto Gift Card</h2>
+      <p className='desc'>Buy crypto gift cards in an instant </p>
+      <Server />
+      <Binance /> 
+      <Bitcoin />                      
+    </main>
   );
-}
+};
 
 export default App;

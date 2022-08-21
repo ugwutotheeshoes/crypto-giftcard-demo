@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.desc {
+  margin-left: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.crypto {
+  margin-top: 8rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.crypto h2 {
+  margin-bottom: 3rem;
+}
+
+.cards {
+  /* margin-right: 2rem; */
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cards div {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  border-radius: 25px;
+}
+
+.header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.header p {
+  font-size: 1.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+svg {
+  font-size: 2.5rem;
+}
+
+.bin {
+  padding: 1.5rem 2rem;
+  width: 400px;
+  margin-right: 10rem;
+}
+
+.bin h2 {
+  text-align: left;
+}
+
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  color: black;
+  background: rgb(241, 199, 12);
+  border-radius: 5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+@media (max-width: 840px) {
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
   }
-  to {
-    transform: rotate(360deg);
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  svg {
+    font-size: 2rem;
+  }
+
+  .cards {
+    display: grid;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+
+  .cards div {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    /* padding: 3rem 4rem; */
+    font-size: 2rem;
+    border-radius: 25px;
+    margin-top: 2rem;
+  }
+
+  .bin {
+    padding: 1rem 1.5rem;
+    width: 300px;
+    margin-right: 0;
   }
 }
