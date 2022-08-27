@@ -1,6 +1,110 @@
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(22, 28%, 21%);
+  --clr-primary-2: hsl(22, 28%, 29%);
+  --clr-primary-3: hsl(22, 28%, 37%);
+  --clr-primary-4: hsl(22, 28%, 45%);
+  /* primary/main color */
+  --clr-primary-5: hsl(22, 31%, 52%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(22, 31%, 60%);
+  --clr-primary-7: hsl(22, 31%, 67%);
+  --clr-primary-8: hsl(20, 31%, 74%);
+  --clr-primary-9: hsl(22, 31%, 81%);
+  --clr-primary-10: hsl(22, 31%, 88%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --transition2: opacity 0.8s ease;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  --fc: rgb(133, 130, 130);
+  --fbg: rgb(245, 242, 242);
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+hr {
+  border: none;
+  border-top: 1px solid var(--clr-grey-8);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  /* margin-bottom: 0.75rem; */
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 0.875rem;
+}
+p {
+  font-size: 1rem;
+  color: var(--clr-grey-3);
+}
 h2 {
   font-size: 2rem;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .title {
@@ -8,38 +112,46 @@ h2 {
   font-weight: 500;
 }
 .desc {
-  margin-left: 0.5rem;
+  /* margin-left: 0.5rem;s */
+  margin: 1rem 0 15rem 0.5rem;
 }
 
 .crypto {
-  margin-top: 8rem;
+  margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-.crypto h2 {
-  margin-bottom: 3rem;
+img {
+  width: 70px;
+  height: 70px;
+  margin-right: 1rem;
 }
 
 .cards {
-  /* margin-right: 2rem; */
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  width: 600px;
+  height: 150px;
 }
 
 .cards div {
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   font-size: 2rem;
-  border-radius: 25px;
+  /* border-radius: 25px; */
 }
 
 .header {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .header p {
-  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  font-size: 1.4rem;
+  color: var(--clr-grey-4);
 }
 
 svg {
@@ -47,25 +159,79 @@ svg {
 }
 
 .bin {
-  padding: 1.5rem 2rem;
-  width: 400px;
-  margin-right: 10rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-
-.bin h2 {
-  text-align: left;
-}
-
+a,
 button {
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   color: black;
   background: rgb(241, 199, 12);
-  border-radius: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   font-weight: 800;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.btn {
+  text-align: right;
+}
+
+.product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  margin: 0 3rem;
+}
+
+.product img {
+  width: 50px;
+  height: 50px;
+}
+
+.description p {
+  font-size: 1.5rem;
+}
+
+.description {
+  margin-top: 15%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+.check {
+  border-left: 1px solid black;
+  padding-left: 1rem;
+}
+.error-container{
+  margin: 20rem 4rem;
+}
+
+.error-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 @media (max-width: 840px) {
@@ -78,11 +244,23 @@ button {
     font-size: 0.9rem;
   }
 
+  .description p {
+    font-size: 1rem;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+  }
+
+  .desc {
+    margin-bottom: 15rem;
+  }
+
   .header {
-    height: 25px;
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
   }
 
   .header p {
@@ -93,24 +271,32 @@ button {
     font-size: 2rem;
   }
 
+  .crypto {
+    /* margin-top: 15%; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
   .cards {
     display: grid;
-    justify-content: space-around;
-    margin-top: 2rem;
+    width: 400px;
+    height: 50px;
   }
 
-  .cards div {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    /* padding: 3rem 4rem; */
-    font-size: 2rem;
-    border-radius: 25px;
-    margin-top: 2rem;
-  }
-
-  .bin {
-    padding: 1rem 1.5rem;
-    width: 300px;
-    margin-right: 0;
+  a,
+  button {
+    border: none;
+    padding: 0.5rem 1rem;
+    color: black;
+    background: rgb(241, 199, 12);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 0.8rem;
   }
 }
