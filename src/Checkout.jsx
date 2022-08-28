@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-// import "../images/Binance_Logo.png"
 
 const ProductDisplay = () => (
   <section>
@@ -11,11 +10,9 @@ const ProductDisplay = () => (
           src="https://res.cloudinary.com/ugwutotheeshoes/image/upload/v1661613925/binance_logo.png"
           alt="The cover of Binance USD"
         />
-        {/* <div className="header"> */}
-        <h2>Binance usd</h2>
+        <h2>Binance USD</h2>
       </div>
       <p>US$50.00</p>
-      {/* </div> */}
     </div>
     <form action="/create-checkout-session" method="POST">
       <div className="btn">

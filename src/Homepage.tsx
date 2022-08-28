@@ -44,27 +44,28 @@ const getUsers = async () => {
         }
     }
 }
-export const Homepage = () => {
+export const Homepage: React.FC = () => {
     return (
-        <div className='crypto'>
-            {/* <h2>Binance USD</h2> */}
-            <div className="cards">
-                <div className="bin">
-                    <img
-                        src="https://res.cloudinary.com/ugwutotheeshoes/image/upload/v1661613925/binance_logo.png"
-                        alt="The cover of Binance USD"
-                    />
-                    <div className="header">
-                        <h2>Binance US</h2>
-                        <p> US$50.00</p>
+        <section>
+            <h2 className='title'>Buy Crypto Gift Card</h2>
+            <p className='desc'>Buy crypto gift cards in an instant </p>
+            <div className='crypto'>
+                <div className="cards">
+                    <div className="bin">
+                        <img
+                            src="https://res.cloudinary.com/ugwutotheeshoes/image/upload/v1661613925/binance_logo.png"
+                            alt="The cover of Binance USD"
+                        />
+                        <div className="header">
+                            <h2>Binance US</h2>
+                            <p> US$50.00</p>
+                        </div>
                     </div>
+                    <Link to='/checkout' onClick={getUsers}>
+                        buy now
+                    </Link>
                 </div>
-
-                <Link to='/checkout' onClick={getUsers}>
-                    buy now
-                </Link>
-
             </div>
-        </div>
+        </section>
     )
 }

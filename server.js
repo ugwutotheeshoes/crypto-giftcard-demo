@@ -5,8 +5,7 @@ const app = express();
 app.use(express.static('public'));
 
 const YOUR_DOMAIN = 'http://localhost:4242';
-const SUCCESS_DOMAIN = 'http://localhost:3000/success';
-const ERROR_DOMAIN = 'http://localhost:3000/error';
+const LOCAL_DOMAIN = 'http://localhost:3000/success';
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
@@ -18,11 +17,11 @@ app.post('/create-checkout-session', async (req, res) => {
       },
     ],
     mode: 'payment',
-    success_url: `${SUCCESS_DOMAIN}`,
-    cancel_url: `${ERROR_DOMAIN}`,
+    success_url: `${YOUR_DOMAIN}?success=true`,
+    cancel_url: `${YOUR_DOMAIN}?canceled=true`,
   });
 
-  res.redirect(303, session.url);
+  res.redirect('http://localhost:3000/success');
 });
 
 app.listen(4242, () => console.log('Running on port 4242'));
